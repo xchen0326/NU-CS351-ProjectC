@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Proj C-LATEST</title>
+
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" >
+    Please use a browser that supports "canvas"
+    </canvas>
+    <label for="lightON">Light On/Off:</label>
+    <select name="cars" id="lightOn">
+      <option value="lightOn" selected = "selected">On</option>
+      <option value="lightOff">Off</option>
+    </select>
+    <label for="shading">Choose a shading:</label>
+    <select name="cars" id="shading">
+      <option value="gouraud" selected = "selected">Gouraud</option>
+      <option value="phong">Phong</option>
+    </select>
+    <label for="lighting">Choose a lighting:</label>
+    <select name="cars" id="lighting">
+      <option value="Phong" selected = "selected">Phong Lighting</option>
+      <option value="BlinnPhong">Blinn Phong Lighting</option>
+    </select>
+
+    <div class="slidecontainer">
+      ambient-r<input type="range" min="0" max="255" value="255" class="slider" id="arColor1">
+      ambient-g<input type="range" min="0" max="255" value="255" class="slider" id="agColor1">
+      ambient-b<input type="range" min="0" max="255" value="255" class="slider" id="abColor1">
+    </div>
+    <div class="slidecontainer">
+      diffuse-r<input type="range" min="0" max="255" value="255" class="slider" id="drColor1">
+      diffuse-g<input type="range" min="0" max="255" value="255" class="slider" id="dgColor1">
+      diffuse-b<input type="range" min="0" max="255" value="255" class="slider" id="dbColor1">
+    </div>
+    <div class="slidecontainer">
+      specular-r<input type="range" min="0" max="255" value="255" class="slider" id="srColor1">
+      specular-g<input type="range" min="0" max="255" value="255" class="slider" id="sgColor1">
+      specular-b<input type="range" min="0" max="255" value="255" class="slider" id="sbColor1">
+    </div>
+    <div class="slidecontainer">
+      Light Position X<input type="range" min="0" max="100" value="0" class="slider" id="PosX">
+      Light Position Y<input type="range" min="0" max="100" value="0" class="slider" id="PosY">
+      Light Position Z<input type="range" min="0" max="100" value="100" class="slider" id="PosZ">
+    </div>
+    <p>
+      Please press A, W, S, D and ↑↓ to control the view
+    </p>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-quat03.js"></script>
+<!-- YOU SHOULD UPGRADE to Brandon Jones' far-faster, 
+      far more complete vector/matrix/quaternion library: (Google it!)
+		<script src="../lib/glmatrix.js"></script>
+--> 
+		<script src="XC_VBObox-Lib.js"></script>
+    <script src="ChenXiaowei_ProjC.js"></script>
+  </body>
+</html>
